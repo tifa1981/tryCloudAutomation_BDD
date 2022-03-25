@@ -6,7 +6,7 @@ import com.tryCloud.utilities.Driver;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 
-public class LoginWithValidCredential_StepDefs {
+public class LoginStepDefs {
 
     LoginPage loginPage = new LoginPage();
 
@@ -33,5 +33,15 @@ public class LoginWithValidCredential_StepDefs {
         String expectedName ="Dashboard - Trycloud QA";
         String actualName = Driver.getDriver().getTitle();
         Assert.assertEquals(expectedName, actualName);
+    }
+    @When("user enters invalid username {string} and passcode {string}")
+    public void user_enters_invalid_username_and_passcode(String invalidUsername, String invalidPassword ) {
+        loginPage.inputUsername.sendKeys(invalidUsername);
+        loginPage.inputPassword.sendKeys(invalidPassword);
+    }
+    @Then("user should be able to see {string} is displayed")
+    public void user_should_be_able_to_see_is_displayed(String errorMessage) {
+
+        Assert.assertTrue(loginPage.errorMsg.isDisplayed());
     }
 }

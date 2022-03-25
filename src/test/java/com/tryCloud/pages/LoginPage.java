@@ -15,6 +15,9 @@ public class LoginPage extends BasePage{
     @FindBy(id="submit-form")
     public WebElement loginButton;
 
+    @FindBy(css = "p[class='warning wrongPasswordMsg']")
+    public WebElement errorMsg;
+
     public void loginWithConfig(){
         inputUsername.sendKeys(ConfigurationReader.getProperty("username1"));
         inputPassword.sendKeys(ConfigurationReader.getProperty("password"));
