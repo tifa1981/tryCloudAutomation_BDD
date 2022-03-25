@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber"
         },
         features = "src/test/resources/features",
-        glue = "net/seamlessly/step_definitions",
+        glue = "com/tryCloud/step_definitions",
         dryRun = false,
         tags = "",
         publish = true
