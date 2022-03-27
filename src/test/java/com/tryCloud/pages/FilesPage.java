@@ -10,7 +10,7 @@ public class FilesPage extends BasePage{
     @FindBy(css = "button[class='settings-button']")
     public WebElement settingsBtn;
 
-    @FindBy(css= "div[id='files-app-extra-settings']")
+    @FindBy(xpath="//div[@id='app-settings-content']//label")
     public List<WebElement> checkBoxes;
 
 
