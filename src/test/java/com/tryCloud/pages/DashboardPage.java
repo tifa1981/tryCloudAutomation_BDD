@@ -19,4 +19,5 @@ public class DashboardPage extends BasePage{
 
     @FindBy(xpath ="//div[@class='header-menu unified-search header-menu--opened']")
     public WebElement serachIcon;
+
 }
