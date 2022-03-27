@@ -5,17 +5,17 @@ import org.openqa.selenium.support.FindBy;
 
 public class DashboardPage extends BasePage{
 
-    @FindBy(xpath = "//span[text()='Dashboard']")
-    public WebElement dashboard;
+    @FindBy(xpath = "//span[.='Dashboard']")
+    public WebElement dashboardModule;
 
-    @FindBy(xpath="//span[.='Files']")
-    public WebElement files ;
+    @FindBy(css="li[data-id='files']")
+    public WebElement filesModule ;
 
-    @FindBy(xpath ="//span[.='Talk']")
-    public WebElement talk;
+    @FindBy(css ="li[data-id='spreed']")
+    public WebElement talkModule;
 
-    @FindBy(xpath="(//span[.='Contacts'])[1]")
-    public WebElement contacts ;
+    @FindBy(css="li[data-id='contacts']")
+    public WebElement contactsModule ;
 
     @FindBy(xpath ="//div[@class='header-menu unified-search header-menu--opened']")
     public WebElement serachIcon;
