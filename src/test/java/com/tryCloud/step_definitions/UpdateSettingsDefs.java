@@ -44,20 +44,16 @@ public class UpdateSettingsDefs {
 
     @Then("the user should be able to click any buttons")
     public void the_user_should_be_able_to_click_any_buttons() {
-
         //  WebElement checkBox =Driver.getDriver().findElement(By.xpath("(//div[@id='app-settings-content']//label)"));
          for (int i = 1; i <=3 ; i++) {
         WebElement checkBox = Driver.getDriver().findElement(By.xpath("(//div[@id='app-settings-content']//label)["+i+"]"));
         BrowserUtils.waitFor(5);
         checkBox.click();
         Assert.assertTrue(checkBox.isDisplayed());
-
           }
 
     }
 }
-
-
 /*
    BrowserUtils.waitFor(5);
         List<WebElement> allCheckboxes =
