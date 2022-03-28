@@ -27,22 +27,39 @@ public class UpdateSettingsDefs {
         //dashboard.dashboardModule.click();
 
     }
+
     @When("the user clicks the Files module")
     public void the_User_Clicks_The_Files_Module() {
-       // BrowserUtils.waitFor(15);
-        BrowserUtils.waitForPresenceOfElement(By.xpath("//li[@data-id='files']"),5);
+        // BrowserUtils.waitFor(15);
+        BrowserUtils.waitForPresenceOfElement(By.xpath("//li[@data-id='files']"), 5);
         dashboard.filesModule.click();
     }
 
     @When("user clicks Settings on the left bottom corner")
     public void user_clicks_settings_on_the_left_bottom_corner() {
         BrowserUtils.waitFor(5);
-       //BrowserUtils.waitForPresenceOfElement(By.xpath("//button[@class='settings-button']"),15);
-       files.settingsBtn.click();
+        //BrowserUtils.waitForPresenceOfElement(By.xpath("//button[@class='settings-button']"),15);
+        files.settingsBtn.click();
     }
+
     @Then("the user should be able to click any buttons")
     public void the_user_should_be_able_to_click_any_buttons() {
+
+        //  WebElement checkBox =Driver.getDriver().findElement(By.xpath("(//div[@id='app-settings-content']//label)"));
+         for (int i = 1; i <=3 ; i++) {
+        WebElement checkBox = Driver.getDriver().findElement(By.xpath("(//div[@id='app-settings-content']//label)["+i+"]"));
         BrowserUtils.waitFor(5);
+        checkBox.click();
+        Assert.assertTrue(checkBox.isDisplayed());
+
+          }
+
+    }
+}
+
+
+/*
+   BrowserUtils.waitFor(5);
         List<WebElement> allCheckboxes =
                 Driver.getDriver().findElements(By.xpath("//div[@id='app-settings-content']//label"));
         allCheckboxes.remove(3);
@@ -57,7 +74,4 @@ public class UpdateSettingsDefs {
 
            }
            Assert.assertTrue(eachCheckbox.isSelected());
-        }
-
-    }
-}
+ */

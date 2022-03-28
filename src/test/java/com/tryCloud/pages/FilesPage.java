@@ -13,6 +13,4 @@ public class FilesPage extends BasePage{
     @FindBy(css= "div[id='files-app-extra-settings']")
     public List<WebElement> checkBoxes;
 
-
-
 }
