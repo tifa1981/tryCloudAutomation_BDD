@@ -18,7 +18,7 @@ public class DashboardPage extends BasePage{
     public WebElement contactsModule ;
 
     @FindBy(xpath ="//div[@class='header-menu unified-search header-menu--opened']")
-    public WebElement serachIcon;
+    public WebElement searchIcon;
 
 
 }

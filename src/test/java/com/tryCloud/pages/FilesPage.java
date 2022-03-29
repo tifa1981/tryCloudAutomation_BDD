@@ -15,4 +15,18 @@ public class FilesPage extends BasePage{
 
 
 
+    @FindBy(xpath = "(//p[text()])[1]")
+    public WebElement numberOfUsage;
+
+    @FindBy(css = "span[class='icon icon-add']")
+    public WebElement icon_add;
+
+    @FindBy(xpath = "(//span[@class='displayname'])[1]")
+    public WebElement uploadFileBtn2;
+
+    @FindBy(xpath = "//span[@class='svg icon icon-upload']")
+    public WebElement uploadFileBtn;
+
+
+
 }
