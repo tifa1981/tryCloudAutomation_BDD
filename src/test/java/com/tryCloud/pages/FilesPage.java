@@ -30,9 +30,4 @@ public class FilesPage extends BasePage{
 
 
 
-
-    @FindBy(xpath="//div[@id='app-settings-content']//label")
-    public List<WebElement> checkBoxes;
-
-
 }
