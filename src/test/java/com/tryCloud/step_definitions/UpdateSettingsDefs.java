@@ -28,14 +28,12 @@ public class UpdateSettingsDefs {
         Driver.getDriver().get(url);
         loginPage.loginWithConfig();
 
-
     }
     @When("user clicks the Files module")
     public void user_clicks_the_files_module() {
         BrowserUtils.waitForPresenceOfElement(By.xpath("//li[@data-id='files']"), 5);
         dashboard.filesModule.click();
     }
-
 
     @When("user clicks Settings on the left bottom corner")
     public void user_clicks_settings_on_the_left_bottom_corner() {
@@ -116,5 +114,6 @@ public class UpdateSettingsDefs {
 
         boolean b = n2 > n1;
         Assert.assertTrue(b);
+
     }
     }
