@@ -25,6 +25,21 @@ public class FilesPage extends BasePage{
     @FindBy(xpath = "//span[@class='svg icon icon-upload']")
     public WebElement uploadFileBtn;
 
+    @FindBy(xpath = "(//span[@class='icon icon-more'])[3]")
+    public WebElement actionIcon;
+
+    @FindBy(xpath = "//a[@class='menuitem action action-details permanent']/span[2]")
+    public WebElement details;
+//*[@id="fileList"]/tr[1]/td[2]/div/ul/li[4]/a/span[2]
+    @FindBy(xpath = "//a[@id='commentsTabView']")
+    public WebElement commentsBox;
+
+    @FindBy(xpath = "//div[@class='message']")
+    public WebElement textBox;
+
+    @FindBy(xpath = "(//div[@class='message'])[2]")
+    public WebElement verifyText;
+
 
 
 
