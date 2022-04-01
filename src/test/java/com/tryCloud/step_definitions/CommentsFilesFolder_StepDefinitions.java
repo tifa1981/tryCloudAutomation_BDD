@@ -29,6 +29,8 @@ public class CommentsFilesFolder_StepDefinitions {
     @When("user click action-icon from any file on the page")
     public void user_click_action_icon_from_any_file_on_the_page() {
         filesPage.actionIcon.click();
+
+
     }
 
     @When("user choose the {string} option")
