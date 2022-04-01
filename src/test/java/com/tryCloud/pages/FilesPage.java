@@ -30,7 +30,7 @@ public class FilesPage extends BasePage{
 
     @FindBy(xpath = "//a[@class='menuitem action action-details permanent']/span[2]")
     public WebElement details;
-//*[@id="fileList"]/tr[1]/td[2]/div/ul/li[4]/a/span[2]
+
     @FindBy(xpath = "//a[@id='commentsTabView']")
     public WebElement commentsBox;
 

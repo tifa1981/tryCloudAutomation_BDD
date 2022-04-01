@@ -8,7 +8,11 @@ import com.tryCloud.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+
+import java.util.Locale;
 
 public class CommentsFilesFolder_StepDefinitions {
 
@@ -24,8 +28,9 @@ public class CommentsFilesFolder_StepDefinitions {
     }
 
     @When("the user clicks the {string} module")
-    public void the_user_clicks_the_module(String file) {
-        dashboardPage.filesModule.click();
+    public void the_user_clicks_the_module(String string) {
+
+        BrowserUtils.DashboardPage(string);
     }
 
     @When("user click action-icon from any file on the page")
@@ -36,9 +41,9 @@ public class CommentsFilesFolder_StepDefinitions {
     }
 
     @When("user choose the {string} option")
-    public void user_choose_the_option(String Details) {
+    public void user_choose_the_option(String string) {
         BrowserUtils.sleep(2);
-        filesPage.details.click();
+        BrowserUtils.FilePage(string);
     }
 
     @When("user write a comment inside the input box")
@@ -53,7 +58,7 @@ public class CommentsFilesFolder_StepDefinitions {
 
     @Then("Verify the comment is displayed in the comment section.")
     public void verify_the_comment_is_displayed_in_the_comment_section() {
-        System.out.println("filesPage.verifyText.getText() = " + filesPage.verifyText.getText());
+        //
         Assert.assertTrue(textIs.equals(filesPage.verifyText.getText()));
 
     }
