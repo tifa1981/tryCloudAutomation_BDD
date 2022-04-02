@@ -6,7 +6,7 @@ import com.tryCloud.utilities.Driver;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 
-public class LoginStepDefs {
+public class US1_2_LoginStepDefs {
 
     LoginPage loginPage = new LoginPage();
 
