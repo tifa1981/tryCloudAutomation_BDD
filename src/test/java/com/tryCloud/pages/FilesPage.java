@@ -1,11 +1,15 @@
 package com.tryCloud.pages;
 
+import com.tryCloud.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class FilesPage extends BasePage{
+public class FilesPage extends BasePage {
 
     @FindBy(css = "button[class='settings-button']")
     public WebElement settingsBtn;
@@ -40,7 +44,10 @@ public class FilesPage extends BasePage{
     @FindBy(xpath = "(//div[@class='message'])[2]")
     public WebElement verifyText;
 
+    @FindBy(xpath = "//label[@for='select_all_files']")
+    public WebElement checkBox;
 
-
+    @FindBy(xpath = "(//a[@class='name sort columntitle']/span[text()='Name'])[1]")
+    public WebElement waitWebElement;
 
 }

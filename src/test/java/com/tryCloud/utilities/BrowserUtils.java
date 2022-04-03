@@ -484,23 +484,26 @@ for given duration
         BrowserUtils.sleep(2);
         for (int i = 1; i <= 9; i++) {
             WebElement myfile = Driver.getDriver().findElement(By.xpath("(//ul[@id='appmenu'])//li[(" + i + ")]//a"));
-            String webele = myfile.getAttribute("aria-label");
-            if (webele.equals(string)) {
+            //  String webele = myfile.getAttribute("aria-label");
+            if (myfile.getAttribute("aria-label").equals(string)) {
                 myfile.click();
-                System.out.println("fileMod.getText() = " + webele);
+
             }
 
         }
     }
-    public static void FilePage(String string){
 
-        for (int i = 3; i <=8 ; i++) {
-            WebElement actiontext = Driver.getDriver().findElement(By.xpath("(//div[@class='fileActionsMenu popovermenu bubble open menu'])//li[("+i+")]//span[2]"));
+    public static void FilePage(String string) {
+
+        for (int i = 3; i <= 8; i++) {
+            WebElement actiontext = Driver.getDriver().findElement(By.xpath("(//div[@class='fileActionsMenu popovermenu bubble open menu'])//li[(" + i + ")]//span[2]"));
             if (actiontext.getText().equals(string)) {
-                System.out.println("actiontext.getText() = " + actiontext.getText());
+
                 actiontext.click();
                 break;
             }
         }
     }
+
+
 }

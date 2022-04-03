@@ -16,21 +16,15 @@ import java.util.Locale;
 
 public class CommentsFilesFolder_StepDefinitions {
 
-    // The users log in with valid credentials
     LoginPage loginPage = new LoginPage();
     DashboardPage dashboardPage = new DashboardPage();
     FilesPage filesPage = new FilesPage();
     String textIs = "Im done for this project, what is next";
 
-    public void the_users_log_in_with_valid_credentials() {
-        Driver.getDriver().get("http://qa2.trycloud.net");
-        loginPage.loginWithConfig();
-    }
 
     @When("the user clicks the {string} module")
     public void the_user_clicks_the_module(String string) {
-
-        BrowserUtils.DashboardPage(string);
+       BrowserUtils.DashboardPage(string);
     }
 
     @When("user click action-icon from any file on the page")

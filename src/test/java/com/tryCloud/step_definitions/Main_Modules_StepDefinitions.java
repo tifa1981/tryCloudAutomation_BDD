@@ -25,6 +25,7 @@ public class Main_Modules_StepDefinitions {
     public void verify_the_user_see_the_following_modules(List<String> modules) {
         List<String> expectedList = new ArrayList<>();
         expectedList.addAll(modules);
+
         System.out.println("expectedList = " + expectedList);
           for (int i = 0; i <= 8; i++) {
               String tab = Driver.getDriver().findElement(By.xpath("(//ul[@id='appmenu'])/li[(" + (i + 1) + ")]/a")).getAttribute("aria-label");
